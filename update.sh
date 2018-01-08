@@ -22,7 +22,7 @@ for version in $versions; do
       [ -d  "$targetDir" ] || mkdir "$targetDir";
       targetFile="$targetDir/Dockerfile";
       dockerFromTag="${version}-${frontend}-${suite}";
-      ( generated_warning ; cat Dockerfile.template ) | sed \
+      ( generated_warning ; cat "Dockerfile.${frontend}") | sed \
         -e "s:%%DOCKER_FROM_TAG%%:${dockerFromTag}:g" \
       > "${targetFile}"
     done
