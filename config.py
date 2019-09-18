@@ -1,6 +1,6 @@
 import itertools
 
-__version__ = '0.2.6'
+__version__ = '0.2.7'
 
 def xrepr(arg):
     if isinstance(arg, str):
@@ -8,12 +8,14 @@ def xrepr(arg):
     else:
         return repr(arg)
 
+
 def generated_warning(php, os, variant):
     return """\
 #############################################################################
 # NOTE: FILE GENERATED AUTOMATICALLY, DO NOT EDIT!!!
 #############################################################################
 """
+
 
 def php_params(php, os, variant):
     """Configuration parameters for php with their default values"""
@@ -60,7 +62,8 @@ def context_tag(php, os, variant, sep='-'):
 
 def context_files(php, os, variant):
     return {'Dockerfile.%s' % variant: 'Dockerfile',
-            'hooks/build.in': 'hooks/build'}
+            'hooks/build.in': 'hooks/build',
+            '.circleci/upload.in': '.circleci/upload'}
 
 
 def context_subst(php, os, variant):
@@ -101,3 +104,4 @@ contexts = [context(php, os, variant) for (php, os, variant) in prod]
 del phps
 del oses
 del variants
+del prod

@@ -1,0 +1,191 @@
+version: 2.1
+
+executor: &executor
+  docker:
+    - image: circleci/python:3.7
+
+build_steps: &build_steps
+  steps:
+    - checkout
+    - run:
+        name: Check if our source tree is in sync
+        command: sh .circleci/check-source-updated
+
+    - setup_remote_docker
+
+    - run:
+        name: Build the image
+        command: (cd $DOCKERFILE_PATH && hooks/build)
+
+    - run:
+        name: Upload the image
+        command: (cd $DOCKERFILE_PATH && .circleci/upload)
+
+env_common: &env_common
+  DOCKER_REPO: korowai/php
+  DOCKER_UPLOAD_SKIP: false
+
+# 7.0
+
+env_7_0_jessie_cli: &env_7_0_jessie_cli
+  environment:
+      <<: *env_common
+      DOCKERFILE_PATH: 7.0/jessie/cli
+      DOCKER_TAG: 7.0-cli-jessie,7.0-cli,7.0
+      IMAGE_NAME: korowai/php:7.0-cli-jessie
+env_7_0_jessie_apache: &env_7_0_jessie_apache
+  environment:
+      <<: *env_common
+      DOCKERFILE_PATH: 7.0/jessie/apache
+      DOCKER_TAG: 7.0-apache-jessie,7.0-apache
+      IMAGE_NAME: korowai/php:7.0-apache-jessie
+
+# 7.1
+env_7_1_jessie_cli: &env_7_1_jessie_cli
+  environment:
+      <<: *env_common
+      DOCKERFILE_PATH: 7.1/jessie/cli
+      DOCKER_TAG: 7.1-cli-jessie,7.1-cli,7.1
+      IMAGE_NAME: korowai/php:7.1-cli-jessie
+env_7_1_jessie_apache: &env_7_1_jessie_apache
+  environment:
+      <<: *env_common
+      DOCKERFILE_PATH: 7.1/jessie/apache
+      DOCKER_TAG: 7.1-apache-jessie,7.1-apache
+      IMAGE_NAME: korowai/php:7.1-apache-jessie
+
+# 7.2
+
+env_7_2_stretch_cli: &env_7_2_stretch_cli
+  environment:
+      <<: *env_common
+      DOCKERFILE_PATH: 7.2/stretch/cli
+      DOCKER_TAG: 7.2-cli-stretch
+      IMAGE_NAME: korowai/php:7.2-cli-stretch
+env_7_2_buster_cli: &env_7_2_buster_cli
+  environment:
+      <<: *env_common
+      DOCKERFILE_PATH: 7.2/buster/cli
+      DOCKER_TAG: 7.2-cli-buster,7.2-cli,7.2
+      IMAGE_NAME: korowai/php:7.2-cli-buster
+env_7_2_stretch_apache: &env_7_2_stretch_apache
+  environment:
+      <<: *env_common
+      DOCKERFILE_PATH: 7.2/stretch/apache
+      DOCKER_TAG: 7.2-apache-stretch
+      IMAGE_NAME: korowai/php:7.2-apache-stretch
+env_7_2_buster_apache: &env_7_2_buster_apache
+  environment:
+      <<: *env_common
+      DOCKERFILE_PATH: 7.2/buster/apache
+      DOCKER_TAG: 7.2-apache-buster,7.2-apache
+      IMAGE_NAME: korowai/php:7.2-apache-buster
+
+# 7.3
+
+env_7_3_stretch_cli: &env_7_3_stretch_cli
+  environment:
+      <<: *env_common
+      DOCKERFILE_PATH: 7.3/stretch/cli
+      DOCKER_TAG: 7.3-cli-stretch
+      IMAGE_NAME: korowai/php:7.3-cli-stretch
+env_7_3_buster_cli: &env_7_3_buster_cli
+  environment:
+      <<: *env_common
+      DOCKERFILE_PATH: 7.3/buster/cli
+      DOCKER_TAG: 7.3-cli-buster,7.3-cli,7.3,7-cli,7,latest-cli,cli,latest
+      IMAGE_NAME: korowai/php:7.3-cli-buster
+env_7_3_stretch_apache: &env_7_3_stretch_apache
+  environment:
+      <<: *env_common
+      DOCKERFILE_PATH: 7.3/stretch/apache
+      DOCKER_TAG: 7.3-apache-stretch
+      IMAGE_NAME: korowai/php:7.3-apache-stretch
+env_7_3_buster_apache: &env_7_3_buster_apache
+  environment:
+      <<: *env_common
+      DOCKERFILE_PATH: 7.3/buster/apache
+      DOCKER_TAG: 7.3-apache-buster,7.3-apache,7-apache,latest-apache,apache,latest
+      IMAGE_NAME: korowai/php:7.3-apache-buster
+
+jobs:
+
+# 7.0
+
+  build_7_0_jessie_cli:
+    <<: *executor
+    <<: *env_7_0_jessie_cli
+    <<: *build_steps
+
+  build_7_0_jessie_apache:
+    <<: *executor
+    <<: *env_7_0_jessie_apache
+    <<: *build_steps
+
+# 7.1
+
+  build_7_1_jessie_cli:
+    <<: *executor
+    <<: *env_7_1_jessie_cli
+    <<: *build_steps
+
+  build_7_1_jessie_apache:
+    <<: *executor
+    <<: *env_7_1_jessie_apache
+    <<: *build_steps
+
+# 7.2
+
+  build_7_2_stretch_cli:
+    <<: *executor
+    <<: *env_7_2_stretch_cli
+    <<: *build_steps
+  build_7_2_buster_cli:
+    <<: *executor
+    <<: *env_7_2_buster_cli
+    <<: *build_steps
+  build_7_2_stretch_apache:
+    <<: *executor
+    <<: *env_7_2_stretch_apache
+    <<: *build_steps
+  build_7_2_buster_apache:
+    <<: *executor
+    <<: *env_7_2_buster_apache
+    <<: *build_steps
+
+# 7.3
+
+  build_7_3_stretch_cli:
+    <<: *executor
+    <<: *env_7_3_stretch_cli
+    <<: *build_steps
+  build_7_3_buster_cli:
+    <<: *executor
+    <<: *env_7_3_buster_cli
+    <<: *build_steps
+  build_7_3_stretch_apache:
+    <<: *executor
+    <<: *env_7_3_stretch_apache
+    <<: *build_steps
+  build_7_3_buster_apache:
+    <<: *executor
+    <<: *env_7_3_buster_apache
+    <<: *build_steps
+
+workflows:
+  version: 2.1
+
+  build_images:
+    jobs:
+      - build_7_0_jessie_cli
+      - build_7_0_jessie_apache
+      - build_7_1_jessie_cli
+      - build_7_1_jessie_apache
+      - build_7_2_stretch_cli
+      - build_7_2_buster_cli
+      - build_7_2_stretch_apache
+      - build_7_2_buster_apache
+      - build_7_3_stretch_cli
+      - build_7_3_buster_cli
+      - build_7_3_stretch_apache
+      - build_7_3_buster_apache
