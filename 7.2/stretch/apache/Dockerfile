@@ -1,10 +1,28 @@
-#
-# NOTE: FILE GENERATED VIA "update.sh"
-#
-# PLEASE DO NOT EDIT IT DIRECTLY
-#
+#############################################################################
+# NOTE: FILE GENERATED AUTOMATICALLY, DO NOT EDIT!!!
+#############################################################################
+
+
 FROM php:7.2-apache-stretch
 MAINTAINER Paweł Tomulik <ptomulik@meil.pw.edu.pl>
+
+
+
+ARG BUILD_DATE
+ARG VCS_REF
+ARG VERSION
+
+LABEL org.label-schema.build-date="${BUILD_DATE}" \
+      org.label-schema.name="Docker PHP+Apache Image" \
+      org.label-schema.description="Docker image with PHP and Apache for Korowai project." \
+      org.label-schema.vcs-ref="${VCS_REF}" \
+      org.label-schema.vcs-url="https://github.com/korowai/docker-php" \
+      org.label-schema.vendor="Paweł Tomulik" \
+      org.label-schema.version="${VERSION}" \
+      org.label-schema.schema-version="1.0"
+
+
+
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \

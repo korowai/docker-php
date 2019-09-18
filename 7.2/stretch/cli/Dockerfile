@@ -1,10 +1,30 @@
-#
-# NOTE: FILE GENERATED VIA "update.sh"
-#
-# PLEASE DO NOT EDIT IT DIRECTLY
-#
+#############################################################################
+# NOTE: FILE GENERATED AUTOMATICALLY, DO NOT EDIT!!!
+#############################################################################
+
+
 FROM php:7.2-cli-stretch
 MAINTAINER Paweł Tomulik <ptomulik@meil.pw.edu.pl>
+
+ARG PHP_UID=1000
+ARG PHP_GID=1000
+
+ARG BUILD_DATE
+ARG VCS_REF
+ARG VERSION
+
+LABEL org.label-schema.build-date="${BUILD_DATE}" \
+      org.label-schema.name="Docker PHP Image" \
+      org.label-schema.description="Docker image with PHP CLI for Korowai project." \
+      org.label-schema.vcs-ref="${VCS_REF}" \
+      org.label-schema.vcs-url="https://github.com/korowai/docker-php" \
+      org.label-schema.vendor="Paweł Tomulik" \
+      org.label-schema.version="${VERSION}" \
+      org.label-schema.schema-version="1.0"
+
+
+ENV PHP_UID=$PHP_UID \
+    PHP_GID=$PHP_GID
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
@@ -20,8 +40,8 @@ RUN apt-get update && \
     rm -f /tmp/dockerize-linux-amd64-v0.6.0.tar.gz && \
     docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu --with-ldap-sasl && \
     docker-php-ext-install ldap && \
-    groupadd -g 1000 php && \
-    useradd -m -g php --uid 1000 php
+    groupadd -g $PHP_GID php && \
+    useradd -m -g php --uid $PHP_UID php
 
 VOLUME /home/php/project
 
