@@ -10,7 +10,8 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends \
       libldap2-dev \
       libsasl2-dev \
-      ssl-cert && \
+      ssl-cert \
+      composer && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     curl -L https://github.com/jwilder/dockerize/releases/download/v0.6.0/dockerize-linux-amd64-v0.6.0.tar.gz \

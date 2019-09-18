@@ -3,7 +3,7 @@
 #
 # PLEASE DO NOT EDIT IT DIRECTLY
 #
-FROM php:7.2-cli-stretch
+FROM php:7.3-cli-buster
 MAINTAINER Paweł Tomulik <ptomulik@meil.pw.edu.pl>
 
 RUN apt-get update && \

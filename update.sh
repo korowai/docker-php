@@ -1,7 +1,7 @@
 #!/bin/bash -eu
 
-versions="7.0 7.1 7.2";
-suites="jessie stretch";
+versions="7.0 7.1 7.2 7.3";
+suites="jessie stretch buster";
 frontends="cli apache";
 
 generated_warning() {
