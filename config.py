@@ -1,6 +1,6 @@
 import itertools
 
-__version__ = '0.2.4'
+__version__ = '0.2.5'
 
 def xrepr(arg):
     if isinstance(arg, str):
