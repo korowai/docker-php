@@ -167,4 +167,4 @@ may only be changed via docker's build arguments.
   - [PHP](https://php.net/)
   - [php-ldap](https://www.php.net/manual/en/book.ldap.php)
   - [composer](https://getcomposer.org/)
-  - [apache] (https://httpd.apache.org/) (images tagged with ``*apache*`` tag)
+  - [apache](https://httpd.apache.org/) (images tagged with ``*apache*`` tag)
