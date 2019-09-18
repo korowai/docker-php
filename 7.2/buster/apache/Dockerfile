@@ -8,12 +8,13 @@ MAINTAINER Paweł Tomulik <ptomulik@meil.pw.edu.pl>
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
+      unzip \
       libldap2-dev \
       libsasl2-dev \
-      ssl-cert \
-      composer && \
+      ssl-cert && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
+    curl -L https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
     curl -L https://github.com/jwilder/dockerize/releases/download/v0.6.0/dockerize-linux-amd64-v0.6.0.tar.gz \
          --output /tmp/dockerize-linux-amd64-v0.6.0.tar.gz && \
     tar -C /usr/local/bin -zxvf /tmp/dockerize-linux-amd64-v0.6.0.tar.gz && \
