@@ -5,6 +5,11 @@ if [ "$DOCKER_SKIP_UPLOAD" = "true" ]; then
   exit 0;
 fi
 
+if [ "$CIRCLECI" = "true" ] && [ "$CIRCLE_BRANCH" != "master" ]; then
+  echo 'skipping docker upload ($CIRCLECI_BRANCH != master)'
+  exit 0;
+fi
+
 if ! git tag --points-at HEAD | grep -qFw '@VERSION@'; then
   echo 'skipping docker upload (HEAD is not tagged as "@VERSION@")'
   exit 0;
