@@ -5,8 +5,8 @@ if [ "$DOCKER_SKIP_UPLOAD" = "true" ]; then
   exit 0;
 fi
 
-if ! git tag --points-at HEAD | grep -qFw '0.3.1'; then
-  echo 'skipping docker upload (HEAD is not tagged as "0.3.1")'
+if ! git tag --points-at HEAD | grep -qFw '0.3.2'; then
+  echo 'skipping docker upload (HEAD is not tagged as "0.3.2")'
   exit 0;
 fi
 

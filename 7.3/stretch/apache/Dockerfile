@@ -27,7 +27,6 @@ LABEL org.label-schema.build-date="${BUILD_DATE}" \
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
       unzip \
-      openssh-client \
       libldap2-dev \
       libsasl2-dev \
       ssl-cert && \
