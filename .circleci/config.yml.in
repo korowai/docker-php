@@ -10,7 +10,7 @@ build_steps: &build_steps
     - checkout
     - run:
         name: Check if our source tree is in sync
-        command: sh .circleci/check-source-updated
+        command: .circleci/check-source-updated
 
     - setup_remote_docker
 

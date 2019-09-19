@@ -7,14 +7,14 @@ if [ "$CI" != "true" ] || [ "$CIRCLECI" != "true" ]; then
   exit 1;
 fi
 
-if [[ `git status --porcelain` ]]; then
+if [ ! -z "`git status --porcelain`" ]; then
   echo 'error: local modifications detected. Can not perform check.' >&2;
   exit 1;
 fi
 
 python update.py --delete
 
-if [[ `git status --porcelain` ]]; then
+if [ ! -z "`git status --porcelain`" ]; then
   echo 'error: source out of date, somebody forgot to run update.py before last commit!' >&2;
   exit 1;
 fi
