@@ -1,0 +1,38 @@
+version: 2.1
+
+executor: &executor
+  docker:
+    - image: circleci/python:3.7
+
+build_steps: &build_steps
+  steps:
+    - checkout
+    - run:
+        name: Check if our source tree is in sync
+        command: sh .circleci/check-source-updated
+
+    - setup_remote_docker
+
+    - run:
+        name: Build the image
+        command: (cd $DOCKERFILE_PATH && hooks/build)
+
+    - run:
+        name: Upload the image
+        command: (cd $DOCKERFILE_PATH && .circleci/upload)
+
+env_common: &env_common
+  DOCKER_REPO: korowai/php
+  DOCKER_UPLOAD_SKIP: false
+
+
+jobs:
+
+  @CIRCLE_JOB_BODIES@
+
+workflows:
+  version: 2.1
+
+  build_images:
+    jobs:
+      @CIRCLE_JOB_LIST@

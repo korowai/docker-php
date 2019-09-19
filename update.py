@@ -8,6 +8,7 @@ import shutil
 ##import tarfile
 ##import tempfile
 import string
+import types
 
 
 class Template(string.Template):
@@ -43,7 +44,7 @@ class ConfigChecker:
                               (self.filename, name, expected, actual))
         return True
 
-    def _check_context_files(self, files, name):
+    def _check_files(self, files, name):
         self._check_isa(files, dict, name)
         for infile, outfile in files.items():
             self._check_isa(infile, str, "any key in " + name)
@@ -53,7 +54,7 @@ class ConfigChecker:
                                    "path, '%s' is absolute") %
                                   (self.filename, name, infile, outfile))
 
-    def _check_context_subst(self, subst, name):
+    def _check_subst(self, subst, name):
         self._check_isa(subst, dict, name)
         for k, v in subst.items():
             self._check_isa(k, str, "any key in " + name)
@@ -62,7 +63,7 @@ class ConfigChecker:
                                    "identifier, '%s' is not") %
                                   (self.filename, name, k))
 
-    def _check_context_dir(self, dir, name):
+    def _check_dir(self, dir, name):
         self._check_isa(dir, str, name)
 
     def check_context(self, context, index):
@@ -72,9 +73,9 @@ class ConfigChecker:
             if k not in context:
                 raise ConfigError("%s: missing key '%s' in %s" %
                                   (self.filename, k, c_i))
-        self._check_context_files(context['files'], c_i + "['files']")
-        self._check_context_subst(context['subst'], c_i + "['subst']")
-        self._check_context_dir(context['dir'], c_i + "['dir']")
+        self._check_files(context['files'], c_i + "['files']")
+        self._check_subst(context['subst'], c_i + "['subst']")
+        self._check_dir(context['dir'], c_i + "['dir']")
 
     def check_contexts(self, contexts):
         self._check_isa(contexts, (list, tuple), "contexts")
@@ -89,8 +90,17 @@ class ConfigChecker:
                                   % (self.filename, key))
         return True
 
+    def check_global(self, config):
+        if 'files' in config:
+            self._check_files(config['files'], 'files')
+        if 'subst' in config:
+            self._check_subst(config['subst'], 'subst')
+        if 'dir' in config:
+            self._check_dir(config['dir'], 'dir')
+
     def check(self, config):
         self.check_required(config)
+        self.check_global(config)
         self.check_contexts(config['contexts'])
         return True
 
@@ -98,6 +108,7 @@ class ConfigChecker:
 class ConfigParser:
     # Internal variables, not interesting, not a part of config
     internal = ['__builtins__']
+    defaults = {'files': dict(), 'subst': dict(), 'dir': '.'}
 
     def __init__(self, filename='-'):
         self.filename = filename
@@ -106,6 +117,8 @@ class ConfigParser:
         return name not in self.internal
 
     def qualify_value(self, value):
+        if isinstance(value, (types.FunctionType, types.ModuleType)):
+            return False
         return True
 
     def qualify_variable(self, name, value):
@@ -115,7 +128,7 @@ class ConfigParser:
         return {k: v for k, v in config.items() if self.qualify_variable(k, v)}
 
     def parse(self, content):
-        config = dict()
+        config = dict(self.defaults)
         exec(compile(content, self.filename, 'exec'), config)
         return self.cleanup(config)
 
@@ -153,6 +166,7 @@ class Updater:
         # self._init_dict(config)
 
     def run(self):
+        self._update_dir(self.config)
         self._update_dirs(self.config['contexts'])
         return 0
 
@@ -162,7 +176,7 @@ class Updater:
 
     def _update_dir(self, context):
         if not self.quiet:
-            print("updating context directory: %s" % context['dir'])
+            print("updating directory: %s" % context['dir'])
         self._update_files(context)
 
     def _update_files(self, context):

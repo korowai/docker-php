@@ -7,3 +7,6 @@
 # Temporary directory
 .tmp/
 tmp/
+
+# Compiled python files
+*.py[co]
