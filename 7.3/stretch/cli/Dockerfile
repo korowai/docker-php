@@ -6,8 +6,7 @@
 FROM php:7.3-cli-stretch
 MAINTAINER Paweł Tomulik <ptomulik@meil.pw.edu.pl>
 
-ARG PHP_UID=1000
-ARG PHP_GID=1000
+
 
 ARG BUILD_DATE
 ARG VCS_REF
@@ -23,8 +22,7 @@ LABEL org.label-schema.build-date="${BUILD_DATE}" \
       org.label-schema.schema-version="1.0"
 
 
-ENV PHP_UID=$PHP_UID \
-    PHP_GID=$PHP_GID
+
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
@@ -39,14 +37,6 @@ RUN apt-get update && \
     tar -C /usr/local/bin -zxvf /tmp/dockerize-linux-amd64-v0.6.0.tar.gz && \
     rm -f /tmp/dockerize-linux-amd64-v0.6.0.tar.gz && \
     docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu --with-ldap-sasl && \
-    docker-php-ext-install ldap && \
-    groupadd -g $PHP_GID php && \
-    useradd -m -g php --uid $PHP_UID php
-
-VOLUME /home/php/project
-
-USER php
-
-WORKDIR /home/php/project
+    docker-php-ext-install ldap
 
 # vim: set ft=dockerfile:

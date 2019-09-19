@@ -34,14 +34,6 @@ RUN apt-get update && \
     tar -C /usr/local/bin -zxvf /tmp/dockerize-linux-amd64-v0.6.0.tar.gz && \
     rm -f /tmp/dockerize-linux-amd64-v0.6.0.tar.gz && \
     docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu --with-ldap-sasl && \
-    docker-php-ext-install ldap && \
-    groupadd -g $PHP_GID php && \
-    useradd -m -g php --uid $PHP_UID php
-
-VOLUME /home/php/project
-
-USER php
-
-WORKDIR /home/php/project
+    docker-php-ext-install ldap
 
 # vim: set ft=dockerfile:

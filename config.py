@@ -19,15 +19,7 @@ def get_generated_warning():
 
 def get_params(php, os, variant):
     """Configuration parameters for php with their default values"""
-
-    params = dict()
-    if variant == 'cli':
-        params.update({
-            'PHP_UID': 1000,
-            'PHP_GID': 1000
-        })
-
-    return params
+    return dict()
 
 
 def get_env_defaults_str(php, os, variant):

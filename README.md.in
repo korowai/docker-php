@@ -18,14 +18,10 @@ The container defines several build arguments which are copied to corresponding
 environment variables within the running container. All the arguments/variables
 have names starting with `PHP_` prefix. All the scripts respect these
 variables, so the easiest way to adjust the container to your needs is to set
-environment variables (`-e` flag to [docker](https://docker.com/)). There are
-some exceptions currently -- `PHP_UID`, `PHP_GID` must be defined at build
-time, so they may only be changed via docker's build arguments.
+environment variables (`-e` flag to [docker](https://docker.com/)).
 
 | Argument                    | Default Value        | Description                                                  |
 | --------------------------- | -------------------- | ------------------------------------------------------------ |
-| PHP\_UID                    | 1000                 | UID of the user running commands within the container (cli). |
-| PHP\_GID                    | 1000                 | GID of the user running commands within the container (cli). |
 
 ### Software included
 
