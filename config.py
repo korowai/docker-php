@@ -120,7 +120,7 @@ def get_microbadges_str(matrix):
         aliases = get_tag_aliases(php, os, variant)
         if aliases:
             lines.append("")
-            lines.append("aliases: %s" % ', '.join(aliases))
+            lines.append("- **aliases**: %s" % ', '.join(aliases))
             lines.append("")
         #tags = get_tags(php, os, variant)
         #lines.append(get_microbadges_str_for_tags(tags))
