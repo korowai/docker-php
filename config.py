@@ -109,14 +109,12 @@ def get_microbadges_str_for_tags(tags):
 
 
 def get_microbadges_str(matrix):
-    php_seen = set([])
+    #seen = set([])
     lines = []
     for (php, os, variant) in reversed(matrix):
-        if php not in php_seen:
-            lines.append("")
-            lines.append("### PHP %s" % php)
-            lines.append("")
-            php_seen.add(php)
+        lines.append("")
+        lines.append("### %s" % get_tag(php, os, variant))
+        lines.append("")
         tags = get_tags(php, os, variant)
         lines.append(get_microbadges_str_for_tags(tags))
     return "\n".join(lines)
