@@ -1,5 +1,6 @@
-# Put this dockerfile in your project and build final image with proper
+# Put this Dockerfile in your project and build final image with proper
 # PHP_xxx settings. This can be convieniently used with docker-compose.
+
 FROM korowai/php:cli
 MAINTAINER Paweł Tomulik <ptomulik@meil.pw.edu.pl>
 
@@ -10,8 +11,8 @@ ARG PHP_GID=1000
 ARG PHP_HOME='/home/php'
 ARG PHP_PROJECT='/home/php/project'
 
-ENV PHP_USER=$PHP_USER
-    PHP_GROUP=$PHP_GROUP
+ENV PHP_USER=$PHP_USER \
+    PHP_GROUP=$PHP_GROUP \
     PHP_UID=$PHP_UID \
     PHP_GID=$PHP_GID \
     PHP_HOME=$PHP_HOME \
