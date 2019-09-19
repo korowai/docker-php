@@ -23,7 +23,7 @@ build_steps: &build_steps
 
     - run:
         name: Upload the image
-        command: (cd $DOCKERFILE_PATH && .circleci/upload)
+        command: .circleci/upload
 
 env_common: &env_common
   DOCKER_REPO: korowai/php
