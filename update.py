@@ -167,12 +167,30 @@ class Updater:
 
     def run(self):
         self._update_dir(self.config)
+        if self.delete:
+            self._delete_dirs(self.config['contexts'])
         self._update_dirs(self.config['contexts'])
         return 0
+
+    def _get_destdir(self, destdir):
+        if not os.path.isabs(destdir):
+            destdir = os.path.join(self.outdir, destdir)
+        return destdir
+
+    def _delete_dirs(self, contexts):
+        for context in contexts:
+            self._delete_dir(context)
 
     def _update_dirs(self, contexts):
         for context in contexts:
             self._update_dir(context)
+
+    def _delete_dir(self, context):
+        destdir = self._get_destdir(context['dir'])
+        if os.path.exists(destdir):
+            if not self.quiet:
+                print("deleting directory: %s" % destdir)
+            shutil.rmtree(destdir)
 
     def _update_dir(self, context):
         if not self.quiet:
@@ -187,10 +205,8 @@ class Updater:
         if not os.path.isabs(infile):
             infile = os.path.join(self.indir, infile)
         if not os.path.isabs(outfile):
-            outdir = context['dir']
-            if not os.path.isabs(outdir):
-                outdir = os.path.join(self.outdir, outdir)
-            outfile = os.path.join(outdir, outfile)
+            destdir = self._get_destdir(context['dir'])
+            outfile = os.path.join(destdir, outfile)
         if os.path.normpath(infile) == os.path.normpath(outfile):
             f = os.path.normpath(infile)
             raise RuntimeError("can't use '%s' as both, input and output" % f)

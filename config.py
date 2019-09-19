@@ -90,8 +90,7 @@ def get_tags(php, os, variant):
 
 def get_context_files(php, os, variant):
     return {'Dockerfile.%s' % variant: 'Dockerfile',
-            'hooks/build.in': 'hooks/build',
-            '.circleci/upload.in': '.circleci/upload'}
+            'hooks/build.in': 'hooks/build' }
 
 
 def get_microbadges_str_for_tag(tag):
@@ -219,5 +218,6 @@ def exclusions():
 
 contexts = get_contexts()
 files = { '.circleci/config.yml.in': '.circleci/config.yml',
+          '.circleci/upload.in': '.circleci/upload',
           'README.md.in': 'README.md' }
 subst = get_global_subst()
