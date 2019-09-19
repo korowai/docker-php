@@ -97,7 +97,7 @@ def get_microbadges_str_for_tag(tag):
     name = 'korowai/php:%(tag)s' % locals()
     url1 = 'https://images.microbadger.com/badges'
     url2 = 'https://microbadger.com/images/%(name)s' % locals()
-    return "\n  ".join([
+    return "\n".join([
         '[![](%(url1)s/version/%(name)s.svg)](%(url2)s "%(name)s")' % locals(),
         '[![](%(url1)s/image/%(name)s.svg)](%(url2)s "Docker image size")' % locals(),
         '[![](%(url1)s/commit/%(name)s.svg)](%(url2)s "Source code")' % locals()
@@ -115,8 +115,15 @@ def get_microbadges_str(matrix):
         lines.append("")
         lines.append("### %s" % get_tag(php, os, variant))
         lines.append("")
-        tags = get_tags(php, os, variant)
-        lines.append(get_microbadges_str_for_tags(tags))
+        tag = get_tag(php, os, variant)
+        lines.append(get_microbadges_str_for_tag(tag))
+        aliases = get_tag_aliases(php, os, variant)
+        if aliases:
+            lines.append("")
+            lines.append("aliases: %s" % ', '.join(aliases))
+            lines.append("")
+        #tags = get_tags(php, os, variant)
+        #lines.append(get_microbadges_str_for_tags(tags))
     return "\n".join(lines)
 
 

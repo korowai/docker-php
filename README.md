@@ -11,153 +11,105 @@ Docker container with PHP for korowai project.
 
 ### 7.3-cli-buster
 
-- [![](https://images.microbadger.com/badges/version/korowai/php:latest.svg)](https://microbadger.com/images/korowai/php:latest "korowai/php:latest")
-  [![](https://images.microbadger.com/badges/image/korowai/php:latest.svg)](https://microbadger.com/images/korowai/php:latest "Docker image size")
-  [![](https://images.microbadger.com/badges/commit/korowai/php:latest.svg)](https://microbadger.com/images/korowai/php:latest "Source code")
-- [![](https://images.microbadger.com/badges/version/korowai/php:cli.svg)](https://microbadger.com/images/korowai/php:cli "korowai/php:cli")
-  [![](https://images.microbadger.com/badges/image/korowai/php:cli.svg)](https://microbadger.com/images/korowai/php:cli "Docker image size")
-  [![](https://images.microbadger.com/badges/commit/korowai/php:cli.svg)](https://microbadger.com/images/korowai/php:cli "Source code")
-- [![](https://images.microbadger.com/badges/version/korowai/php:latest-cli.svg)](https://microbadger.com/images/korowai/php:latest-cli "korowai/php:latest-cli")
-  [![](https://images.microbadger.com/badges/image/korowai/php:latest-cli.svg)](https://microbadger.com/images/korowai/php:latest-cli "Docker image size")
-  [![](https://images.microbadger.com/badges/commit/korowai/php:latest-cli.svg)](https://microbadger.com/images/korowai/php:latest-cli "Source code")
-- [![](https://images.microbadger.com/badges/version/korowai/php:7.svg)](https://microbadger.com/images/korowai/php:7 "korowai/php:7")
-  [![](https://images.microbadger.com/badges/image/korowai/php:7.svg)](https://microbadger.com/images/korowai/php:7 "Docker image size")
-  [![](https://images.microbadger.com/badges/commit/korowai/php:7.svg)](https://microbadger.com/images/korowai/php:7 "Source code")
-- [![](https://images.microbadger.com/badges/version/korowai/php:7-cli.svg)](https://microbadger.com/images/korowai/php:7-cli "korowai/php:7-cli")
-  [![](https://images.microbadger.com/badges/image/korowai/php:7-cli.svg)](https://microbadger.com/images/korowai/php:7-cli "Docker image size")
-  [![](https://images.microbadger.com/badges/commit/korowai/php:7-cli.svg)](https://microbadger.com/images/korowai/php:7-cli "Source code")
-- [![](https://images.microbadger.com/badges/version/korowai/php:7.3.svg)](https://microbadger.com/images/korowai/php:7.3 "korowai/php:7.3")
-  [![](https://images.microbadger.com/badges/image/korowai/php:7.3.svg)](https://microbadger.com/images/korowai/php:7.3 "Docker image size")
-  [![](https://images.microbadger.com/badges/commit/korowai/php:7.3.svg)](https://microbadger.com/images/korowai/php:7.3 "Source code")
-- [![](https://images.microbadger.com/badges/version/korowai/php:7.3-cli.svg)](https://microbadger.com/images/korowai/php:7.3-cli "korowai/php:7.3-cli")
-  [![](https://images.microbadger.com/badges/image/korowai/php:7.3-cli.svg)](https://microbadger.com/images/korowai/php:7.3-cli "Docker image size")
-  [![](https://images.microbadger.com/badges/commit/korowai/php:7.3-cli.svg)](https://microbadger.com/images/korowai/php:7.3-cli "Source code")
-- [![](https://images.microbadger.com/badges/version/korowai/php:7.3-buster.svg)](https://microbadger.com/images/korowai/php:7.3-buster "korowai/php:7.3-buster")
-  [![](https://images.microbadger.com/badges/image/korowai/php:7.3-buster.svg)](https://microbadger.com/images/korowai/php:7.3-buster "Docker image size")
-  [![](https://images.microbadger.com/badges/commit/korowai/php:7.3-buster.svg)](https://microbadger.com/images/korowai/php:7.3-buster "Source code")
-- [![](https://images.microbadger.com/badges/version/korowai/php:7.3-cli-buster.svg)](https://microbadger.com/images/korowai/php:7.3-cli-buster "korowai/php:7.3-cli-buster")
-  [![](https://images.microbadger.com/badges/image/korowai/php:7.3-cli-buster.svg)](https://microbadger.com/images/korowai/php:7.3-cli-buster "Docker image size")
-  [![](https://images.microbadger.com/badges/commit/korowai/php:7.3-cli-buster.svg)](https://microbadger.com/images/korowai/php:7.3-cli-buster "Source code")
+[![](https://images.microbadger.com/badges/version/korowai/php:7.3-cli-buster.svg)](https://microbadger.com/images/korowai/php:7.3-cli-buster "korowai/php:7.3-cli-buster")
+[![](https://images.microbadger.com/badges/image/korowai/php:7.3-cli-buster.svg)](https://microbadger.com/images/korowai/php:7.3-cli-buster "Docker image size")
+[![](https://images.microbadger.com/badges/commit/korowai/php:7.3-cli-buster.svg)](https://microbadger.com/images/korowai/php:7.3-cli-buster "Source code")
+
+aliases: 7.3-buster, 7.3-cli, 7.3, 7-cli, 7, latest-cli, cli, latest
+
 
 ### 7.3-apache-buster
 
-- [![](https://images.microbadger.com/badges/version/korowai/php:apache.svg)](https://microbadger.com/images/korowai/php:apache "korowai/php:apache")
-  [![](https://images.microbadger.com/badges/image/korowai/php:apache.svg)](https://microbadger.com/images/korowai/php:apache "Docker image size")
-  [![](https://images.microbadger.com/badges/commit/korowai/php:apache.svg)](https://microbadger.com/images/korowai/php:apache "Source code")
-- [![](https://images.microbadger.com/badges/version/korowai/php:latest-apache.svg)](https://microbadger.com/images/korowai/php:latest-apache "korowai/php:latest-apache")
-  [![](https://images.microbadger.com/badges/image/korowai/php:latest-apache.svg)](https://microbadger.com/images/korowai/php:latest-apache "Docker image size")
-  [![](https://images.microbadger.com/badges/commit/korowai/php:latest-apache.svg)](https://microbadger.com/images/korowai/php:latest-apache "Source code")
-- [![](https://images.microbadger.com/badges/version/korowai/php:7-apache.svg)](https://microbadger.com/images/korowai/php:7-apache "korowai/php:7-apache")
-  [![](https://images.microbadger.com/badges/image/korowai/php:7-apache.svg)](https://microbadger.com/images/korowai/php:7-apache "Docker image size")
-  [![](https://images.microbadger.com/badges/commit/korowai/php:7-apache.svg)](https://microbadger.com/images/korowai/php:7-apache "Source code")
-- [![](https://images.microbadger.com/badges/version/korowai/php:7.3-apache.svg)](https://microbadger.com/images/korowai/php:7.3-apache "korowai/php:7.3-apache")
-  [![](https://images.microbadger.com/badges/image/korowai/php:7.3-apache.svg)](https://microbadger.com/images/korowai/php:7.3-apache "Docker image size")
-  [![](https://images.microbadger.com/badges/commit/korowai/php:7.3-apache.svg)](https://microbadger.com/images/korowai/php:7.3-apache "Source code")
-- [![](https://images.microbadger.com/badges/version/korowai/php:7.3-apache-buster.svg)](https://microbadger.com/images/korowai/php:7.3-apache-buster "korowai/php:7.3-apache-buster")
-  [![](https://images.microbadger.com/badges/image/korowai/php:7.3-apache-buster.svg)](https://microbadger.com/images/korowai/php:7.3-apache-buster "Docker image size")
-  [![](https://images.microbadger.com/badges/commit/korowai/php:7.3-apache-buster.svg)](https://microbadger.com/images/korowai/php:7.3-apache-buster "Source code")
+[![](https://images.microbadger.com/badges/version/korowai/php:7.3-apache-buster.svg)](https://microbadger.com/images/korowai/php:7.3-apache-buster "korowai/php:7.3-apache-buster")
+[![](https://images.microbadger.com/badges/image/korowai/php:7.3-apache-buster.svg)](https://microbadger.com/images/korowai/php:7.3-apache-buster "Docker image size")
+[![](https://images.microbadger.com/badges/commit/korowai/php:7.3-apache-buster.svg)](https://microbadger.com/images/korowai/php:7.3-apache-buster "Source code")
+
+aliases: 7.3-apache, 7-apache, latest-apache, apache
+
 
 ### 7.3-cli-stretch
 
-- [![](https://images.microbadger.com/badges/version/korowai/php:7.3-stretch.svg)](https://microbadger.com/images/korowai/php:7.3-stretch "korowai/php:7.3-stretch")
-  [![](https://images.microbadger.com/badges/image/korowai/php:7.3-stretch.svg)](https://microbadger.com/images/korowai/php:7.3-stretch "Docker image size")
-  [![](https://images.microbadger.com/badges/commit/korowai/php:7.3-stretch.svg)](https://microbadger.com/images/korowai/php:7.3-stretch "Source code")
-- [![](https://images.microbadger.com/badges/version/korowai/php:7.3-cli-stretch.svg)](https://microbadger.com/images/korowai/php:7.3-cli-stretch "korowai/php:7.3-cli-stretch")
-  [![](https://images.microbadger.com/badges/image/korowai/php:7.3-cli-stretch.svg)](https://microbadger.com/images/korowai/php:7.3-cli-stretch "Docker image size")
-  [![](https://images.microbadger.com/badges/commit/korowai/php:7.3-cli-stretch.svg)](https://microbadger.com/images/korowai/php:7.3-cli-stretch "Source code")
+[![](https://images.microbadger.com/badges/version/korowai/php:7.3-cli-stretch.svg)](https://microbadger.com/images/korowai/php:7.3-cli-stretch "korowai/php:7.3-cli-stretch")
+[![](https://images.microbadger.com/badges/image/korowai/php:7.3-cli-stretch.svg)](https://microbadger.com/images/korowai/php:7.3-cli-stretch "Docker image size")
+[![](https://images.microbadger.com/badges/commit/korowai/php:7.3-cli-stretch.svg)](https://microbadger.com/images/korowai/php:7.3-cli-stretch "Source code")
+
+aliases: 7.3-stretch
+
 
 ### 7.3-apache-stretch
 
-- [![](https://images.microbadger.com/badges/version/korowai/php:7.3-apache-stretch.svg)](https://microbadger.com/images/korowai/php:7.3-apache-stretch "korowai/php:7.3-apache-stretch")
-  [![](https://images.microbadger.com/badges/image/korowai/php:7.3-apache-stretch.svg)](https://microbadger.com/images/korowai/php:7.3-apache-stretch "Docker image size")
-  [![](https://images.microbadger.com/badges/commit/korowai/php:7.3-apache-stretch.svg)](https://microbadger.com/images/korowai/php:7.3-apache-stretch "Source code")
+[![](https://images.microbadger.com/badges/version/korowai/php:7.3-apache-stretch.svg)](https://microbadger.com/images/korowai/php:7.3-apache-stretch "korowai/php:7.3-apache-stretch")
+[![](https://images.microbadger.com/badges/image/korowai/php:7.3-apache-stretch.svg)](https://microbadger.com/images/korowai/php:7.3-apache-stretch "Docker image size")
+[![](https://images.microbadger.com/badges/commit/korowai/php:7.3-apache-stretch.svg)](https://microbadger.com/images/korowai/php:7.3-apache-stretch "Source code")
 
 ### 7.2-cli-buster
 
-- [![](https://images.microbadger.com/badges/version/korowai/php:7.2.svg)](https://microbadger.com/images/korowai/php:7.2 "korowai/php:7.2")
-  [![](https://images.microbadger.com/badges/image/korowai/php:7.2.svg)](https://microbadger.com/images/korowai/php:7.2 "Docker image size")
-  [![](https://images.microbadger.com/badges/commit/korowai/php:7.2.svg)](https://microbadger.com/images/korowai/php:7.2 "Source code")
-- [![](https://images.microbadger.com/badges/version/korowai/php:7.2-cli.svg)](https://microbadger.com/images/korowai/php:7.2-cli "korowai/php:7.2-cli")
-  [![](https://images.microbadger.com/badges/image/korowai/php:7.2-cli.svg)](https://microbadger.com/images/korowai/php:7.2-cli "Docker image size")
-  [![](https://images.microbadger.com/badges/commit/korowai/php:7.2-cli.svg)](https://microbadger.com/images/korowai/php:7.2-cli "Source code")
-- [![](https://images.microbadger.com/badges/version/korowai/php:7.2-buster.svg)](https://microbadger.com/images/korowai/php:7.2-buster "korowai/php:7.2-buster")
-  [![](https://images.microbadger.com/badges/image/korowai/php:7.2-buster.svg)](https://microbadger.com/images/korowai/php:7.2-buster "Docker image size")
-  [![](https://images.microbadger.com/badges/commit/korowai/php:7.2-buster.svg)](https://microbadger.com/images/korowai/php:7.2-buster "Source code")
-- [![](https://images.microbadger.com/badges/version/korowai/php:7.2-cli-buster.svg)](https://microbadger.com/images/korowai/php:7.2-cli-buster "korowai/php:7.2-cli-buster")
-  [![](https://images.microbadger.com/badges/image/korowai/php:7.2-cli-buster.svg)](https://microbadger.com/images/korowai/php:7.2-cli-buster "Docker image size")
-  [![](https://images.microbadger.com/badges/commit/korowai/php:7.2-cli-buster.svg)](https://microbadger.com/images/korowai/php:7.2-cli-buster "Source code")
+[![](https://images.microbadger.com/badges/version/korowai/php:7.2-cli-buster.svg)](https://microbadger.com/images/korowai/php:7.2-cli-buster "korowai/php:7.2-cli-buster")
+[![](https://images.microbadger.com/badges/image/korowai/php:7.2-cli-buster.svg)](https://microbadger.com/images/korowai/php:7.2-cli-buster "Docker image size")
+[![](https://images.microbadger.com/badges/commit/korowai/php:7.2-cli-buster.svg)](https://microbadger.com/images/korowai/php:7.2-cli-buster "Source code")
+
+aliases: 7.2-buster, 7.2-cli, 7.2
+
 
 ### 7.2-apache-buster
 
-- [![](https://images.microbadger.com/badges/version/korowai/php:7.2-apache.svg)](https://microbadger.com/images/korowai/php:7.2-apache "korowai/php:7.2-apache")
-  [![](https://images.microbadger.com/badges/image/korowai/php:7.2-apache.svg)](https://microbadger.com/images/korowai/php:7.2-apache "Docker image size")
-  [![](https://images.microbadger.com/badges/commit/korowai/php:7.2-apache.svg)](https://microbadger.com/images/korowai/php:7.2-apache "Source code")
-- [![](https://images.microbadger.com/badges/version/korowai/php:7.2-apache-buster.svg)](https://microbadger.com/images/korowai/php:7.2-apache-buster "korowai/php:7.2-apache-buster")
-  [![](https://images.microbadger.com/badges/image/korowai/php:7.2-apache-buster.svg)](https://microbadger.com/images/korowai/php:7.2-apache-buster "Docker image size")
-  [![](https://images.microbadger.com/badges/commit/korowai/php:7.2-apache-buster.svg)](https://microbadger.com/images/korowai/php:7.2-apache-buster "Source code")
+[![](https://images.microbadger.com/badges/version/korowai/php:7.2-apache-buster.svg)](https://microbadger.com/images/korowai/php:7.2-apache-buster "korowai/php:7.2-apache-buster")
+[![](https://images.microbadger.com/badges/image/korowai/php:7.2-apache-buster.svg)](https://microbadger.com/images/korowai/php:7.2-apache-buster "Docker image size")
+[![](https://images.microbadger.com/badges/commit/korowai/php:7.2-apache-buster.svg)](https://microbadger.com/images/korowai/php:7.2-apache-buster "Source code")
+
+aliases: 7.2-apache
+
 
 ### 7.2-cli-stretch
 
-- [![](https://images.microbadger.com/badges/version/korowai/php:7.2-stretch.svg)](https://microbadger.com/images/korowai/php:7.2-stretch "korowai/php:7.2-stretch")
-  [![](https://images.microbadger.com/badges/image/korowai/php:7.2-stretch.svg)](https://microbadger.com/images/korowai/php:7.2-stretch "Docker image size")
-  [![](https://images.microbadger.com/badges/commit/korowai/php:7.2-stretch.svg)](https://microbadger.com/images/korowai/php:7.2-stretch "Source code")
-- [![](https://images.microbadger.com/badges/version/korowai/php:7.2-cli-stretch.svg)](https://microbadger.com/images/korowai/php:7.2-cli-stretch "korowai/php:7.2-cli-stretch")
-  [![](https://images.microbadger.com/badges/image/korowai/php:7.2-cli-stretch.svg)](https://microbadger.com/images/korowai/php:7.2-cli-stretch "Docker image size")
-  [![](https://images.microbadger.com/badges/commit/korowai/php:7.2-cli-stretch.svg)](https://microbadger.com/images/korowai/php:7.2-cli-stretch "Source code")
+[![](https://images.microbadger.com/badges/version/korowai/php:7.2-cli-stretch.svg)](https://microbadger.com/images/korowai/php:7.2-cli-stretch "korowai/php:7.2-cli-stretch")
+[![](https://images.microbadger.com/badges/image/korowai/php:7.2-cli-stretch.svg)](https://microbadger.com/images/korowai/php:7.2-cli-stretch "Docker image size")
+[![](https://images.microbadger.com/badges/commit/korowai/php:7.2-cli-stretch.svg)](https://microbadger.com/images/korowai/php:7.2-cli-stretch "Source code")
+
+aliases: 7.2-stretch
+
 
 ### 7.2-apache-stretch
 
-- [![](https://images.microbadger.com/badges/version/korowai/php:7.2-apache-stretch.svg)](https://microbadger.com/images/korowai/php:7.2-apache-stretch "korowai/php:7.2-apache-stretch")
-  [![](https://images.microbadger.com/badges/image/korowai/php:7.2-apache-stretch.svg)](https://microbadger.com/images/korowai/php:7.2-apache-stretch "Docker image size")
-  [![](https://images.microbadger.com/badges/commit/korowai/php:7.2-apache-stretch.svg)](https://microbadger.com/images/korowai/php:7.2-apache-stretch "Source code")
+[![](https://images.microbadger.com/badges/version/korowai/php:7.2-apache-stretch.svg)](https://microbadger.com/images/korowai/php:7.2-apache-stretch "korowai/php:7.2-apache-stretch")
+[![](https://images.microbadger.com/badges/image/korowai/php:7.2-apache-stretch.svg)](https://microbadger.com/images/korowai/php:7.2-apache-stretch "Docker image size")
+[![](https://images.microbadger.com/badges/commit/korowai/php:7.2-apache-stretch.svg)](https://microbadger.com/images/korowai/php:7.2-apache-stretch "Source code")
 
 ### 7.1-cli-jessie
 
-- [![](https://images.microbadger.com/badges/version/korowai/php:7.1.svg)](https://microbadger.com/images/korowai/php:7.1 "korowai/php:7.1")
-  [![](https://images.microbadger.com/badges/image/korowai/php:7.1.svg)](https://microbadger.com/images/korowai/php:7.1 "Docker image size")
-  [![](https://images.microbadger.com/badges/commit/korowai/php:7.1.svg)](https://microbadger.com/images/korowai/php:7.1 "Source code")
-- [![](https://images.microbadger.com/badges/version/korowai/php:7.1-cli.svg)](https://microbadger.com/images/korowai/php:7.1-cli "korowai/php:7.1-cli")
-  [![](https://images.microbadger.com/badges/image/korowai/php:7.1-cli.svg)](https://microbadger.com/images/korowai/php:7.1-cli "Docker image size")
-  [![](https://images.microbadger.com/badges/commit/korowai/php:7.1-cli.svg)](https://microbadger.com/images/korowai/php:7.1-cli "Source code")
-- [![](https://images.microbadger.com/badges/version/korowai/php:7.1-jessie.svg)](https://microbadger.com/images/korowai/php:7.1-jessie "korowai/php:7.1-jessie")
-  [![](https://images.microbadger.com/badges/image/korowai/php:7.1-jessie.svg)](https://microbadger.com/images/korowai/php:7.1-jessie "Docker image size")
-  [![](https://images.microbadger.com/badges/commit/korowai/php:7.1-jessie.svg)](https://microbadger.com/images/korowai/php:7.1-jessie "Source code")
-- [![](https://images.microbadger.com/badges/version/korowai/php:7.1-cli-jessie.svg)](https://microbadger.com/images/korowai/php:7.1-cli-jessie "korowai/php:7.1-cli-jessie")
-  [![](https://images.microbadger.com/badges/image/korowai/php:7.1-cli-jessie.svg)](https://microbadger.com/images/korowai/php:7.1-cli-jessie "Docker image size")
-  [![](https://images.microbadger.com/badges/commit/korowai/php:7.1-cli-jessie.svg)](https://microbadger.com/images/korowai/php:7.1-cli-jessie "Source code")
+[![](https://images.microbadger.com/badges/version/korowai/php:7.1-cli-jessie.svg)](https://microbadger.com/images/korowai/php:7.1-cli-jessie "korowai/php:7.1-cli-jessie")
+[![](https://images.microbadger.com/badges/image/korowai/php:7.1-cli-jessie.svg)](https://microbadger.com/images/korowai/php:7.1-cli-jessie "Docker image size")
+[![](https://images.microbadger.com/badges/commit/korowai/php:7.1-cli-jessie.svg)](https://microbadger.com/images/korowai/php:7.1-cli-jessie "Source code")
+
+aliases: 7.1-jessie, 7.1-cli, 7.1
+
 
 ### 7.1-apache-jessie
 
-- [![](https://images.microbadger.com/badges/version/korowai/php:7.1-apache.svg)](https://microbadger.com/images/korowai/php:7.1-apache "korowai/php:7.1-apache")
-  [![](https://images.microbadger.com/badges/image/korowai/php:7.1-apache.svg)](https://microbadger.com/images/korowai/php:7.1-apache "Docker image size")
-  [![](https://images.microbadger.com/badges/commit/korowai/php:7.1-apache.svg)](https://microbadger.com/images/korowai/php:7.1-apache "Source code")
-- [![](https://images.microbadger.com/badges/version/korowai/php:7.1-apache-jessie.svg)](https://microbadger.com/images/korowai/php:7.1-apache-jessie "korowai/php:7.1-apache-jessie")
-  [![](https://images.microbadger.com/badges/image/korowai/php:7.1-apache-jessie.svg)](https://microbadger.com/images/korowai/php:7.1-apache-jessie "Docker image size")
-  [![](https://images.microbadger.com/badges/commit/korowai/php:7.1-apache-jessie.svg)](https://microbadger.com/images/korowai/php:7.1-apache-jessie "Source code")
+[![](https://images.microbadger.com/badges/version/korowai/php:7.1-apache-jessie.svg)](https://microbadger.com/images/korowai/php:7.1-apache-jessie "korowai/php:7.1-apache-jessie")
+[![](https://images.microbadger.com/badges/image/korowai/php:7.1-apache-jessie.svg)](https://microbadger.com/images/korowai/php:7.1-apache-jessie "Docker image size")
+[![](https://images.microbadger.com/badges/commit/korowai/php:7.1-apache-jessie.svg)](https://microbadger.com/images/korowai/php:7.1-apache-jessie "Source code")
+
+aliases: 7.1-apache
+
 
 ### 7.0-cli-jessie
 
-- [![](https://images.microbadger.com/badges/version/korowai/php:7.0.svg)](https://microbadger.com/images/korowai/php:7.0 "korowai/php:7.0")
-  [![](https://images.microbadger.com/badges/image/korowai/php:7.0.svg)](https://microbadger.com/images/korowai/php:7.0 "Docker image size")
-  [![](https://images.microbadger.com/badges/commit/korowai/php:7.0.svg)](https://microbadger.com/images/korowai/php:7.0 "Source code")
-- [![](https://images.microbadger.com/badges/version/korowai/php:7.0-cli.svg)](https://microbadger.com/images/korowai/php:7.0-cli "korowai/php:7.0-cli")
-  [![](https://images.microbadger.com/badges/image/korowai/php:7.0-cli.svg)](https://microbadger.com/images/korowai/php:7.0-cli "Docker image size")
-  [![](https://images.microbadger.com/badges/commit/korowai/php:7.0-cli.svg)](https://microbadger.com/images/korowai/php:7.0-cli "Source code")
-- [![](https://images.microbadger.com/badges/version/korowai/php:7.0-jessie.svg)](https://microbadger.com/images/korowai/php:7.0-jessie "korowai/php:7.0-jessie")
-  [![](https://images.microbadger.com/badges/image/korowai/php:7.0-jessie.svg)](https://microbadger.com/images/korowai/php:7.0-jessie "Docker image size")
-  [![](https://images.microbadger.com/badges/commit/korowai/php:7.0-jessie.svg)](https://microbadger.com/images/korowai/php:7.0-jessie "Source code")
-- [![](https://images.microbadger.com/badges/version/korowai/php:7.0-cli-jessie.svg)](https://microbadger.com/images/korowai/php:7.0-cli-jessie "korowai/php:7.0-cli-jessie")
-  [![](https://images.microbadger.com/badges/image/korowai/php:7.0-cli-jessie.svg)](https://microbadger.com/images/korowai/php:7.0-cli-jessie "Docker image size")
-  [![](https://images.microbadger.com/badges/commit/korowai/php:7.0-cli-jessie.svg)](https://microbadger.com/images/korowai/php:7.0-cli-jessie "Source code")
+[![](https://images.microbadger.com/badges/version/korowai/php:7.0-cli-jessie.svg)](https://microbadger.com/images/korowai/php:7.0-cli-jessie "korowai/php:7.0-cli-jessie")
+[![](https://images.microbadger.com/badges/image/korowai/php:7.0-cli-jessie.svg)](https://microbadger.com/images/korowai/php:7.0-cli-jessie "Docker image size")
+[![](https://images.microbadger.com/badges/commit/korowai/php:7.0-cli-jessie.svg)](https://microbadger.com/images/korowai/php:7.0-cli-jessie "Source code")
+
+aliases: 7.0-jessie, 7.0-cli, 7.0
+
 
 ### 7.0-apache-jessie
 
-- [![](https://images.microbadger.com/badges/version/korowai/php:7.0-apache.svg)](https://microbadger.com/images/korowai/php:7.0-apache "korowai/php:7.0-apache")
-  [![](https://images.microbadger.com/badges/image/korowai/php:7.0-apache.svg)](https://microbadger.com/images/korowai/php:7.0-apache "Docker image size")
-  [![](https://images.microbadger.com/badges/commit/korowai/php:7.0-apache.svg)](https://microbadger.com/images/korowai/php:7.0-apache "Source code")
-- [![](https://images.microbadger.com/badges/version/korowai/php:7.0-apache-jessie.svg)](https://microbadger.com/images/korowai/php:7.0-apache-jessie "korowai/php:7.0-apache-jessie")
-  [![](https://images.microbadger.com/badges/image/korowai/php:7.0-apache-jessie.svg)](https://microbadger.com/images/korowai/php:7.0-apache-jessie "Docker image size")
-  [![](https://images.microbadger.com/badges/commit/korowai/php:7.0-apache-jessie.svg)](https://microbadger.com/images/korowai/php:7.0-apache-jessie "Source code")
+[![](https://images.microbadger.com/badges/version/korowai/php:7.0-apache-jessie.svg)](https://microbadger.com/images/korowai/php:7.0-apache-jessie "korowai/php:7.0-apache-jessie")
+[![](https://images.microbadger.com/badges/image/korowai/php:7.0-apache-jessie.svg)](https://microbadger.com/images/korowai/php:7.0-apache-jessie "Docker image size")
+[![](https://images.microbadger.com/badges/commit/korowai/php:7.0-apache-jessie.svg)](https://microbadger.com/images/korowai/php:7.0-apache-jessie "Source code")
+
+aliases: 7.0-apache
+
 
 ## Details
 
