@@ -1,3 +1,7 @@
+#############################################################################
+# NOTE: FILE GENERATED AUTOMATICALLY, DO NOT EDIT!!!
+#############################################################################
+
 version: 2.1
 
 executor: &executor
@@ -141,15 +145,27 @@ workflows:
 
   build_images:
     jobs:
-      - build_7_0_apache_jessie
-      - build_7_0_cli_jessie
-      - build_7_1_apache_jessie
-      - build_7_1_cli_jessie
-      - build_7_2_apache_stretch
-      - build_7_2_cli_stretch
-      - build_7_2_apache_buster
-      - build_7_2_cli_buster
-      - build_7_3_apache_stretch
-      - build_7_3_cli_stretch
-      - build_7_3_apache_buster
-      - build_7_3_cli_buster
+      - build_7_0_apache_jessie:
+          context: korowai-docker
+      - build_7_0_cli_jessie:
+          context: korowai-docker
+      - build_7_1_apache_jessie:
+          context: korowai-docker
+      - build_7_1_cli_jessie:
+          context: korowai-docker
+      - build_7_2_apache_stretch:
+          context: korowai-docker
+      - build_7_2_cli_stretch:
+          context: korowai-docker
+      - build_7_2_apache_buster:
+          context: korowai-docker
+      - build_7_2_cli_buster:
+          context: korowai-docker
+      - build_7_3_apache_stretch:
+          context: korowai-docker
+      - build_7_3_cli_stretch:
+          context: korowai-docker
+      - build_7_3_apache_buster:
+          context: korowai-docker
+      - build_7_3_cli_buster:
+          context: korowai-docker

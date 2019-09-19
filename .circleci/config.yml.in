@@ -1,3 +1,4 @@
+@GENERATED_WARNING@
 version: 2.1
 
 executor: &executor
@@ -28,11 +29,11 @@ env_common: &env_common
 
 jobs:
 
-  @CIRCLE_JOB_BODIES@
+  @CIRCLE_JOBS@
 
 workflows:
   version: 2.1
 
   build_images:
     jobs:
-      @CIRCLE_JOB_LIST@
+      @CIRCLE_WORKFLOW_JOBS@

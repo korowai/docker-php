@@ -59,6 +59,7 @@ def get_context_dir(php, os, variant, sep='/'):
 def get_tag(php=None, os=None, variant=None, sep='-'):
     return sep.join([x for x in [php, variant, os] if x is not None])
 
+
 def get_tag_aliases(php, os, variant):
     aliases = []
     vgroup = [t for t in get_matrix() if php == t[0] and variant == t[2]]
@@ -82,13 +83,16 @@ def get_tag_aliases(php, os, variant):
             aliases.append(get_tag('latest'))
     return aliases
 
+
 def get_tags(php, os, variant):
     return [get_tag(php, os, variant)] + get_tag_aliases(php, os, variant)
+
 
 def get_context_files(php, os, variant):
     return {'Dockerfile.%s' % variant: 'Dockerfile',
             'hooks/build.in': 'hooks/build',
             '.circleci/upload.in': '.circleci/upload'}
+
 
 def get_microbadges_str_for_tag(tag):
     name = 'korowai/php:%(tag)s' % locals()
@@ -100,8 +104,10 @@ def get_microbadges_str_for_tag(tag):
         '[![](%(url1)s/commit/%(name)s.svg)](%(url2)s "Source code")' % locals()
   ])
 
+
 def get_microbadges_str_for_tags(tags):
     return '- ' + "\n- ".join(reversed([get_microbadges_str_for_tag(tag) for tag in tags]))
+
 
 def get_microbadges_str(matrix):
     php_seen = set([])
@@ -116,10 +122,12 @@ def get_microbadges_str(matrix):
         lines.append(get_microbadges_str_for_tags(tags))
     return "\n".join(lines)
 
+
 def get_circle_job_name(php, os, variant):
     return "build_%s_%s_%s" % (php.replace('.','_'), variant, os)
 
-def get_circle_job_bodies_str(matrix):
+
+def get_circle_jobs_str(matrix):
     jobs = []
     for m in matrix:
         php, os, variant = m
@@ -136,13 +144,19 @@ def get_circle_job_bodies_str(matrix):
         jobs.append(s)
     return "\n\n  ".join(jobs)
 
-def get_circle_job_list_str(matrix):
-    names = [ "- %s" % get_circle_job_name(*t) for t in matrix]
-    return "\n      ".join(names)
+
+def get_circle_workflow_jobs_str(matrix):
+    lines = []
+    for (php, os, variant) in matrix:
+        lines.append("- %s:" % get_circle_job_name(php, os, variant))
+        lines.append("    context: korowai-docker")
+    return "\n      ".join(lines)
+
 
 def get_common_subst():
     return dict({ 'GENERATED_WARNING' : get_generated_warning(),
                   'VERSION': __version__ })
+
 
 def get_context_subst(php, os, variant):
     return dict(get_common_subst(), **dict({
@@ -153,13 +167,15 @@ def get_context_subst(php, os, variant):
             'DOCKER_PHP_ENV': get_docker_env_str(php, os, variant)
         }, **get_params(php, os, variant)))
 
+
 def get_global_subst():
     matrix = get_matrix()
     return dict(get_common_subst(), **dict({
             'MICROBADGES': get_microbadges_str(matrix),
-            'CIRCLE_JOB_BODIES': get_circle_job_bodies_str(matrix),
-            'CIRCLE_JOB_LIST': get_circle_job_list_str(matrix)
+            'CIRCLE_JOBS': get_circle_jobs_str(matrix),
+            'CIRCLE_WORKFLOW_JOBS': get_circle_workflow_jobs_str(matrix)
         }))
+
 
 def get_context(php, os, variant):
     return {'dir': get_context_dir(php, os, variant),
