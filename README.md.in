@@ -29,3 +29,5 @@ environment variables (`-e` flag to [docker](https://docker.com/)).
   - [php-ldap](https://www.php.net/manual/en/book.ldap.php)
   - [composer](https://getcomposer.org/)
   - [apache](https://httpd.apache.org/) (images tagged with ``*apache*`` tag)
+  - [ldap-utils](https://www.openldap.org/) (images tagged with ``*cli`` tag and their aliases)
+
