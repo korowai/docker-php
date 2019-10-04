@@ -32,24 +32,6 @@ env_common: &env_common
 
 jobs:
 
-  build_7_0_apache_jessie:
-    <<: *executor
-    environment:
-      <<: *env_common
-      DOCKERFILE_PATH: 7.0/jessie/apache
-      IMAGE_NAME: korowai/php:7.0-apache-jessie
-      DOCKER_TAG: 7.0-apache-jessie,7.0-apache
-    <<: *build_steps
-
-  build_7_0_cli_jessie:
-    <<: *executor
-    environment:
-      <<: *env_common
-      DOCKERFILE_PATH: 7.0/jessie/cli
-      IMAGE_NAME: korowai/php:7.0-cli-jessie
-      DOCKER_TAG: 7.0-cli-jessie,7.0-jessie,7.0-cli,7.0
-    <<: *build_steps
-
   build_7_1_apache_jessie:
     <<: *executor
     environment:
@@ -145,10 +127,6 @@ workflows:
 
   build_images:
     jobs:
-      - build_7_0_apache_jessie:
-          context: korowai-docker
-      - build_7_0_cli_jessie:
-          context: korowai-docker
       - build_7_1_apache_jessie:
           context: korowai-docker
       - build_7_1_cli_jessie:

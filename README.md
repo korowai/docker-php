@@ -93,24 +93,6 @@ Docker container with PHP for korowai project.
 - **aliases**: 7.1-apache
 
 
-### 7.0-cli-jessie
-
-[![](https://images.microbadger.com/badges/version/korowai/php:7.0-cli-jessie.svg)](https://microbadger.com/images/korowai/php:7.0-cli-jessie "korowai/php:7.0-cli-jessie")
-[![](https://images.microbadger.com/badges/image/korowai/php:7.0-cli-jessie.svg)](https://microbadger.com/images/korowai/php:7.0-cli-jessie "Docker image size")
-[![](https://images.microbadger.com/badges/commit/korowai/php:7.0-cli-jessie.svg)](https://microbadger.com/images/korowai/php:7.0-cli-jessie "Source code")
-
-- **aliases**: 7.0-jessie, 7.0-cli, 7.0
-
-
-### 7.0-apache-jessie
-
-[![](https://images.microbadger.com/badges/version/korowai/php:7.0-apache-jessie.svg)](https://microbadger.com/images/korowai/php:7.0-apache-jessie "korowai/php:7.0-apache-jessie")
-[![](https://images.microbadger.com/badges/image/korowai/php:7.0-apache-jessie.svg)](https://microbadger.com/images/korowai/php:7.0-apache-jessie "Docker image size")
-[![](https://images.microbadger.com/badges/commit/korowai/php:7.0-apache-jessie.svg)](https://microbadger.com/images/korowai/php:7.0-apache-jessie "Source code")
-
-- **aliases**: 7.0-apache
-
-
 ## Details
 
 ### Build arguments & environment variables
