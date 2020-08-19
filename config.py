@@ -1,6 +1,6 @@
 import itertools
 
-__version__ = '0.3.4'
+__version__ = '0.4.0'
 
 def xrepr(arg):
     if isinstance(arg, str):
@@ -192,7 +192,7 @@ def get_contexts():
 
 
 def phps():
-    return [ '7.1', '7.2', '7.3' ]
+    return [ '7.1', '7.2', '7.3', '7.4' ]
 
 
 def oses():
@@ -207,10 +207,16 @@ def exclusions():
     return [
         ('7.0', 'stretch'),
         ('7.0', 'buster'),
+
         ('7.1', 'stretch'),
         ('7.1', 'buster'),
+
         ('7.2', 'jessie'),
+
         ('7.3', 'jessie'),
+
+        ('7.4', 'jessie'),
+        ('7.4', 'stretch'),
     ]
 
 contexts = get_contexts()

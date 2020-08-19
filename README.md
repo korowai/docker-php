@@ -9,13 +9,31 @@ Docker container with PHP for korowai project.
 ## Image versions
 
 
+### 7.4-cli-buster
+
+[![](https://images.microbadger.com/badges/version/korowai/php:7.4-cli-buster.svg)](https://microbadger.com/images/korowai/php:7.4-cli-buster "korowai/php:7.4-cli-buster")
+[![](https://images.microbadger.com/badges/image/korowai/php:7.4-cli-buster.svg)](https://microbadger.com/images/korowai/php:7.4-cli-buster "Docker image size")
+[![](https://images.microbadger.com/badges/commit/korowai/php:7.4-cli-buster.svg)](https://microbadger.com/images/korowai/php:7.4-cli-buster "Source code")
+
+- **aliases**: 7.4-buster, 7.4-cli, 7.4, 7-cli, 7, latest-cli, cli, latest
+
+
+### 7.4-apache-buster
+
+[![](https://images.microbadger.com/badges/version/korowai/php:7.4-apache-buster.svg)](https://microbadger.com/images/korowai/php:7.4-apache-buster "korowai/php:7.4-apache-buster")
+[![](https://images.microbadger.com/badges/image/korowai/php:7.4-apache-buster.svg)](https://microbadger.com/images/korowai/php:7.4-apache-buster "Docker image size")
+[![](https://images.microbadger.com/badges/commit/korowai/php:7.4-apache-buster.svg)](https://microbadger.com/images/korowai/php:7.4-apache-buster "Source code")
+
+- **aliases**: 7.4-apache, 7-apache, latest-apache, apache
+
+
 ### 7.3-cli-buster
 
 [![](https://images.microbadger.com/badges/version/korowai/php:7.3-cli-buster.svg)](https://microbadger.com/images/korowai/php:7.3-cli-buster "korowai/php:7.3-cli-buster")
 [![](https://images.microbadger.com/badges/image/korowai/php:7.3-cli-buster.svg)](https://microbadger.com/images/korowai/php:7.3-cli-buster "Docker image size")
 [![](https://images.microbadger.com/badges/commit/korowai/php:7.3-cli-buster.svg)](https://microbadger.com/images/korowai/php:7.3-cli-buster "Source code")
 
-- **aliases**: 7.3-buster, 7.3-cli, 7.3, 7-cli, 7, latest-cli, cli, latest
+- **aliases**: 7.3-buster, 7.3-cli, 7.3
 
 
 ### 7.3-apache-buster
@@ -24,7 +42,7 @@ Docker container with PHP for korowai project.
 [![](https://images.microbadger.com/badges/image/korowai/php:7.3-apache-buster.svg)](https://microbadger.com/images/korowai/php:7.3-apache-buster "Docker image size")
 [![](https://images.microbadger.com/badges/commit/korowai/php:7.3-apache-buster.svg)](https://microbadger.com/images/korowai/php:7.3-apache-buster "Source code")
 
-- **aliases**: 7.3-apache, 7-apache, latest-apache, apache
+- **aliases**: 7.3-apache
 
 
 ### 7.3-cli-stretch

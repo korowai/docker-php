@@ -110,7 +110,7 @@ jobs:
       <<: *env_common
       DOCKERFILE_PATH: 7.3/buster/apache
       IMAGE_NAME: korowai/php:7.3-apache-buster
-      DOCKER_TAG: 7.3-apache-buster,7.3-apache,7-apache,latest-apache,apache
+      DOCKER_TAG: 7.3-apache-buster,7.3-apache
     <<: *build_steps
 
   build_7_3_cli_buster:
@@ -119,7 +119,25 @@ jobs:
       <<: *env_common
       DOCKERFILE_PATH: 7.3/buster/cli
       IMAGE_NAME: korowai/php:7.3-cli-buster
-      DOCKER_TAG: 7.3-cli-buster,7.3-buster,7.3-cli,7.3,7-cli,7,latest-cli,cli,latest
+      DOCKER_TAG: 7.3-cli-buster,7.3-buster,7.3-cli,7.3
+    <<: *build_steps
+
+  build_7_4_apache_buster:
+    <<: *executor
+    environment:
+      <<: *env_common
+      DOCKERFILE_PATH: 7.4/buster/apache
+      IMAGE_NAME: korowai/php:7.4-apache-buster
+      DOCKER_TAG: 7.4-apache-buster,7.4-apache,7-apache,latest-apache,apache
+    <<: *build_steps
+
+  build_7_4_cli_buster:
+    <<: *executor
+    environment:
+      <<: *env_common
+      DOCKERFILE_PATH: 7.4/buster/cli
+      IMAGE_NAME: korowai/php:7.4-cli-buster
+      DOCKER_TAG: 7.4-cli-buster,7.4-buster,7.4-cli,7.4,7-cli,7,latest-cli,cli,latest
     <<: *build_steps
 
 workflows:
@@ -146,4 +164,8 @@ workflows:
       - build_7_3_apache_buster:
           context: korowai-docker
       - build_7_3_cli_buster:
+          context: korowai-docker
+      - build_7_4_apache_buster:
+          context: korowai-docker
+      - build_7_4_cli_buster:
           context: korowai-docker
